@@ -6,6 +6,14 @@ using PublisherDomain;
 
 
 PubContext _context = new PubContext();
+
+/*
+ ps   -- add-migration
+ .net -- dotnet ef migrations add
+dotnet tool install dotnet-ef
+ * 
+ */
+
 //using (PubContext context = new PubContext())
 //{
 //    context.Database.EnsureCreated();
