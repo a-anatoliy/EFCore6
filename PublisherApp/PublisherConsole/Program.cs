@@ -211,7 +211,7 @@ void SkipAndTakeAuthors()
 void PrintAuthors (List<Author> authors) {
     foreach (var author in authors)
     {
-        Console.WriteLine($"{author.Id} - {author.FirstName} {author.LastName}");
+        Console.WriteLine($"{author.AuthorId} - {author.FirstName} {author.LastName}");
     }
 }
 
@@ -239,7 +239,7 @@ void GetAuthors() {
     var authors=context.Authors.ToList();
     foreach (var author in authors)
     {
-        Console.WriteLine($"{author.Id} - {author.FirstName} {author.LastName}");
+        Console.WriteLine($"{author.AuthorId} - {author.FirstName} {author.LastName}");
     }
 }
 
@@ -288,7 +288,7 @@ void GetAuthorWithBooks()
     var authors = context.Authors.Include(a => a.Books).ToList();
     foreach (var author in authors)
     {
-        Console.WriteLine($"{author.Id} - {author.FirstName} {author.LastName}");
+        Console.WriteLine($"{author.AuthorId} - {author.FirstName} {author.LastName}");
         foreach (var book in author.Books)
         {
             Console.WriteLine($" * {book.Title}");
